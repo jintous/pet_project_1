@@ -105,7 +105,7 @@ def save_results(**context):
 
 # Класс для условного ветвления
 class BranchOperator(BaseBranchOperator):
-    def choose_branch(self, **context):
+    def choose_branch(self, context):
         ti = context['ti']
         user_data = ti.xcom_pull(task_ids='generate_task', key='user_data')
         
